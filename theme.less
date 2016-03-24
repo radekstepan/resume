@@ -8,8 +8,12 @@
 @import url('http://fonts.googleapis.com/css?family=Calibri');
 @import url('http://fonts.googleapis.com/css?family=Cambria');
 
-// Colors.
+// Vars.
 @text: #231f20;
+
+// Media breakpoints.
+@narrow: ~"only screen and (max-width: 1040px)";
+@mobile: ~"only screen and (max-width: 600px)";
 
 #resume {
   font-family: "Calibri";
@@ -43,6 +47,11 @@
   header {
     text-align: center;
 
+    @media @mobile {
+      text-align: left;
+      padding: 0 20px;
+    }
+
     h1 {
       letter-spacing: 1px;
       margin: 0;
@@ -60,12 +69,20 @@
       li {
         display: inline-block;
 
+        @media @mobile {
+          display: block;
+        }
+
         &:not(:first-child) {
           &:before {
             content: "\00b7";
             display: inline-block;
             padding: 0 5px 0 2px;
             font-weight: bold;
+
+            @media @mobile {
+              display: none;
+            }
           }
         }
       }
@@ -85,10 +102,18 @@
     margin-top: 40px;
     .box-sizing(border-box);
 
+    @media @mobile {
+      width: 100%;
+    }
+
     h1 {
       margin: 0;
       padding-left: 100px;
       font-size: 30px;
+
+      @media @narrow {
+        padding-left: 0;
+      }
     }
 
     h2 {
@@ -118,12 +143,22 @@
       position: relative;
       padding-left: 100px;
 
+      @media @narrow {
+        padding-left: 0;
+      }
+
       aside {
         text-align: right;
         position: absolute;
         top: 64px;
         left: 0;
         width: 80px;
+
+        @media @narrow {
+          position: static;
+          text-align: left;
+          width: auto;
+        }
 
         time {
           white-space: nowrap;
@@ -133,6 +168,10 @@
           display: block;
           padding: 0 0 3px 0;
           font-size: 17px;
+
+          @media @narrow {
+            display: inline-block;
+          }
 
           &:not(:first-child) {
             &:before {
@@ -163,6 +202,10 @@
 
       h1 {
         padding-left: 120px;
+
+        @media @narrow {
+          padding-left: 20px;
+        }
       }
 
       h3 {
@@ -174,6 +217,10 @@
         width: 50%;
         .box-sizing(border-box);
         padding: 0 20px;
+
+        @media @mobile {
+          width: 100%;
+        }
       }
     }
   }
