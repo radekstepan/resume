@@ -72,6 +72,10 @@
     h1 {
       letter-spacing: 1px;
       margin: 0;
+
+      @media print {
+        letter-spacing: 0;
+      }
     }
 
     h2 {
@@ -124,7 +128,7 @@
     .box-sizing(border-box);
 
     @media print {
-      margin-top: 10px;
+      margin-top: 30px;
     }
 
     @media @mobile {
@@ -140,7 +144,7 @@
         font-size: 16px;
       }
 
-      @media @narrow {
+      @media @narrow, print {
         padding-left: 0;
       }
     }
@@ -172,8 +176,16 @@
     p {
       margin: 6px 0;
 
+      @media print {
+        margin: 4px 0;
+      }
+
       & + p {
         margin-top: 20px;
+
+        @media print {
+          margin-top: 6px;
+        }
       }
     }
 
@@ -181,7 +193,7 @@
       position: relative;
       padding-left: 100px;
 
-      @media @narrow {
+      @media @narrow, print {
         padding-left: 0;
       }
 
@@ -196,7 +208,7 @@
           top: 43px;
         }
 
-        @media @narrow {
+        @media @narrow, print {
           position: static;
           text-align: left;
           width: auto;
@@ -211,12 +223,16 @@
           padding: 0 0 3px 0;
           font-size: 17px;
 
-          @media print {
-            font-size: 10px;
+          @media @narrow, print {
+            display: inline-block;
+            font-style: normal;
+            padding: 0;
+            font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
           }
 
-          @media @narrow {
-            display: inline-block;
+          @media print {
+            font-size: 12px;
+            color: #666;
           }
 
           &:not(:first-child) {
@@ -249,13 +265,13 @@
       h1 {
         padding-left: 120px;
 
-        @media @narrow {
+        @media @narrow, print {
           padding-left: 20px;
         }
       }
 
       h3 {
-        color: #db971c;
+        color: #CC9900;
       }
 
       .wrap {
