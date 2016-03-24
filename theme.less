@@ -16,12 +16,20 @@
 @mobile: ~"only screen and (max-width: 600px)";
 
 #resume {
-  font-family: "Calibri";
+  font-family: Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif;
   color: @text;
   font-size: 18px;
   margin: 0 auto;
   max-width: 1000px;
   padding: 40px 10px;
+
+  @media print {
+    padding: 0;
+  }
+
+  @media print {
+    font-size: 12px;
+  }
 
   &:after {
     display: block;
@@ -34,6 +42,11 @@
     text-decoration: none;
     border-bottom: 1px solid fade(@text, 10%);
     background: fade(@text, 2%);
+
+    @media print {
+      border: none;
+      background: transparent;
+    }
   }
 
   ul {
@@ -42,6 +55,10 @@
 
   code {
     font-size: 17px;
+
+    @media print {
+      font-size: 11px;
+    }
   }
 
   header {
@@ -61,6 +78,10 @@
       color: #0f9bf2;
       font-weight: normal;
       margin: 0 0 10px 0;
+
+      @media print {
+        margin: 0;
+      }
     }
 
     ul {
@@ -102,6 +123,10 @@
     margin-top: 40px;
     .box-sizing(border-box);
 
+    @media print {
+      margin-top: 10px;
+    }
+
     @media @mobile {
       width: 100%;
     }
@@ -110,6 +135,10 @@
       margin: 0;
       padding-left: 100px;
       font-size: 30px;
+
+      @media print {
+        font-size: 16px;
+      }
 
       @media @narrow {
         padding-left: 0;
@@ -120,6 +149,11 @@
       font-size: 22px;
       margin: 30px 0 0 0;
 
+      @media print {
+        font-size: 14px;
+        margin-top: 10px;
+      }
+
       span {
         font-weight: normal;
       }
@@ -129,6 +163,10 @@
       font-size: 22px;
       font-weight: normal;
       margin: 0;
+
+      @media print {
+        font-size: 14px;
+      }
     }
 
     p {
@@ -154,6 +192,10 @@
         left: 0;
         width: 80px;
 
+        @media print {
+          top: 43px;
+        }
+
         @media @narrow {
           position: static;
           text-align: left;
@@ -164,10 +206,14 @@
           white-space: nowrap;
           color: #818284;
           font-style: italic;
-          font-family: "Cambria";
+          font-family: Cambria, Georgia, serif;
           display: block;
           padding: 0 0 3px 0;
           font-size: 17px;
+
+          @media print {
+            font-size: 10px;
+          }
 
           @media @narrow {
             display: inline-block;
