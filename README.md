@@ -1,6 +1,6 @@
 #[resume](http://radekstepan.com/resume)
 
-A personal resume/curriculum vitae.
+A personal resume/curriculum vitae with media breakpoints and (Chrome) print styles.
 
 ![image](https://raw.githubusercontent.com/radekstepan/resume/master/screenshot.png)
 
@@ -10,5 +10,4 @@ A personal resume/curriculum vitae.
 $ nvm use
 $ npm install
 $ make build
-# politics-2016/0.0.2 started on port 8080
 ```
