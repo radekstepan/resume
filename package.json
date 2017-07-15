@@ -6,12 +6,12 @@
   "private": true,
   "license": "AGPL-3.0",
   "devDependencies": {
-    "catw": "^1.0.1",
-    "clean-css": "^3.4.10",
-    "less": "^2.6.1",
-    "lesshat": "^3.0.2",
-    "node-static": "^0.7.7",
-    "normalize.less": "^1.0.0"
+    "catw": "1.0.1",
+    "clean-css": "3.4.10",
+    "less": "2.6.1",
+    "lesshat": "3.0.2",
+    "node-static": "0.7.7",
+    "normalize.less": "1.0.0"
   },
   "repository": {
     "type": "git",
