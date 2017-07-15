@@ -1,10 +1,10 @@
-#[resume](http://radekstepan.com/resume)
+# [resume](http://radekstepan.com/resume)
 
 A personal resume/curriculum vitae with media breakpoints and (Chrome) print styles.
 
 ![image](https://raw.githubusercontent.com/radekstepan/resume/master/screenshot.png)
 
-##Build
+## Build
 
 ```bash
 $ nvm use
