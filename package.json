@@ -1,20 +1,20 @@
 {
   "name": "resume",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A personal resume/curriculum vitae",
   "author": "Radek Stepan <dev@radekstepan.com> (http://radekstepan.com)",
   "private": true,
   "license": "AGPL-3.0",
-  "devDependencies": {
-    "catw": "1.0.1",
-    "clean-css": "3.4.10",
-    "less": "2.6.1",
-    "lesshat": "3.0.2",
-    "node-static": "0.7.7",
-    "normalize.less": "1.0.0"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/radekstepan/resume.git"
+  },
+  "dependencies": {
+    "less": "^3.9.0",
+    "lesshat": "^4.1.0",
+    "normalize.less": "^1.0.0"
+  },
+  "scripts": {
+    "start": "lessc --js styles.less public/styles.css"
   }
 }

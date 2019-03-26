@@ -2,7 +2,7 @@
 @import "node_modules/normalize.less/normalize.less";
 
 // LESS Mixins.
-@import "node_modules/lesshat/build/lesshat.less";
+@import "node_modules/lesshat/lesshat.less";
 
 // Fonts.
 @import url('http://fonts.googleapis.com/css?family=Calibri');
@@ -40,12 +40,25 @@
   a {
     color: inherit;
     text-decoration: none;
-    border-bottom: 1px solid fade(@text, 10%);
     background: fade(@text, 2%);
+    position: relative;
+
+    &:after {
+      display: block;
+      content: "";
+      width: 100%;
+      border-bottom: 1px solid fade(@text, 10%);
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+    }
 
     @media print {
-      border: none;
       background: transparent;
+
+      &:after {
+        display: none;
+      }
     }
   }
 
